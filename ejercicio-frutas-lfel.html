@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>5a</title>
+    <script>
+    var frutas = new Array("Manzanas","Peras","Sandías","Platanos","Guanábana","Uvas");
+            var grande=0,fruta='';
+        frutas.forEach(function(v,k){
+            if(grande < v.length){
+                fruta = v;
+                grande=v.length;
+            }
+            
+        });
+            document.write("La fruta " + fruta +' es la más grande con  ' + grande + ' caracteres.');
+    </script>
+</head>
+
+<body>
+</body>
+</html>

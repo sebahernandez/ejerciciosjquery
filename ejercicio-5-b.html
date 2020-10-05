@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sebastian Lagos">
+    <title>Ejercicio 5 B</title>
+</head>
+<body>
+    
+<script>
+
+function solicita(){
+      // solicita el ingreso de una o mas palabras.
+      var pregunta = prompt('Ingrese algunas palabras o un parrafo');
+      // Convierte cadenas en una Matriz a partir de el separador.
+      var cantidadPalabras = pregunta.split(" ");
+      // Asignamos el valor length a caracteres para controlar la condición.
+      var caracteres = cantidadPalabras.length;
+     // Respuesta condicional
+        if(caracteres < 10){
+            alert('Son pocas palabras. Vamos! escriba un poquito más.');
+            // llama a la funcion "recursiva".
+            solicita();
+        }else{
+    // Recorre el listado de palabras separadas por split.
+            for (i=0; i< cantidadPalabras.length;i++){
+					document.write(cantidadPalabras[i] + " = " + cantidadPalabras[i].length +' caracteres ' + "<br>");		
+				}
+    // Muestra en el documento la cantidad de palabras y caracteres.
+           document.write("<p> Las palabras del texto son :" + cantidadPalabras + "</p>");
+           document.write("<p> Las cantidad de caracteres del texto son :" + pregunta.length + "</p>");
+          
+        }
+    }
+
+    solicita();
+</script>
+
+</body>
+</html>

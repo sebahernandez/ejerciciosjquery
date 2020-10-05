@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual JS</title>
+</head>
+<body>
+
+
+    <div id="hotelName"></div>
+
+
+    <div id="rooms"></div>
+
+    <script>
+
+
+        var hotel = {
+            //Propiedades//
+            name: 'Hotel Sunset',
+            rooms: 40, 
+            booked:10,
+            //metodo //
+            checkAvailability: function() {
+                return hotel.rooms - hotel.booked;
+            }
+        }
+
+        hotel.rooms = true;
+
+        var elName = document.getElementById('hotelName');
+        elName.textContent = hotel.name;
+
+        var elRooms = document.getElementById('rooms');
+        elRooms.textContent = hotel.checkAvailability();
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>

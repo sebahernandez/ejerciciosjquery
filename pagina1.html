@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sebastian Lagos" />
+    <title>Ejercicio 6 </title>
+</head>
+
+<body>
+    <h1>Ejercicio 6 </h1>
+
+    <button onclick="abrirVentana()">Abrir Ventana</button>
+
+
+    <script>
+        // obtenemos el tamaño dinamico y lo divimos en 4, obteniendo 1/4 de la panatalla.
+        var height = (window.outerHeight/2) ;
+        var width =  (window.outerWidth/2);
+        // variable window open
+        var v1;
+        // inicializamos un función de apertura de la ventana
+        function abrirVentana() {
+            v1 = window.open('pagina2.html', 'PopUp',
+                'scrollbars=yes ' +
+                'width=' + width + ' ' +
+                'height=' + height + ' ' +
+                'top=' + (window.screenTop + (height - (height / 2))) + ' ' +
+                'left=' + (window.screenLeft + (width - (width / 2)))
+            )
+        
+            v1.document.write('<h1>Apertura de la pagina 2<h1>');
+            setTimeout(function () {
+                window.location = "pagina3.html";
+                v1.close();
+            }, 3000);
+
+        }
+
+
+    </script>
+
+    <script>
+         // Obtenemos el tamaño dinamico y lo divimos en 4, obteniendo 1/4 de la panatalla.
+    var height = (parseInt(window.innerHeight) / 4);
+    var width = (parseInt(window.innerWidth) / 4);
+
+    // Ajuste horizontal
+    var x = parseInt((screen.width - width) / 2);
+    // Ajustae vertical
+    var y = parseInt((screen.height - height) / 2);
+    // Variable para la nueva ventana
+    var v1;
+    // inicializamos un función de apertura de la ventana
+    function abrirVentana() {
+        // No es necesario realizar más cálculos
+        // Basta con incluir las variables donde corresponde
+        v1 = window.open('pagina2.html', 'PopUp',
+            `scrollbars=yes
+            width=${width}
+            height=${height}
+            top=${y}
+            left=${x}`
+        );
+    
+        v1.document.write('<h1>Apertura de la pagina 2<h1>');
+        setTimeout(function () {
+            window.location = "pagina3.html";
+            v1.close();
+        }, 3000);
+    }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowtype</title>
+</head>
+<style>
+    body {
+        font-size: 18px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        line-height: 1.45;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 3em;
+    }
+
+    .container {
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #caja{
+        width: 250px;
+        height:250px;
+        border: 2px solid black;
+        background: yellow;
+    }
+    /* #caja:hover{
+        background:red;
+        cursor:pointer;
+        transition: 300ms all;
+    } */
+</style>
+
+<body>
+
+    <div class="container">
+        <h1>Titulo principal</h1>
+        <h2>Subtitulo</h2>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aspernatur perferendis repellendus quod,
+            dicta quae, iusto quas aliquid atque dolorem omnis sunt suscipit ut nisi modi saepe eveniet quibusdam ipsam?
+        </p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aspernatur perferendis repellendus quod,
+            dicta quae, iusto quas aliquid atque dolorem omnis sunt suscipit ut nisi modi saepe eveniet quibusdam ipsam?
+        </p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aspernatur perferendis repellendus quod,
+            dicta quae, iusto quas aliquid atque dolorem omnis sunt suscipit ut nisi modi saepe eveniet quibusdam ipsam?
+        </p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aspernatur perferendis repellendus quod,
+            dicta quae, iusto quas aliquid atque dolorem omnis sunt suscipit ut nisi modi saepe eveniet quibusdam ipsam?
+        </p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aspernatur perferendis repellendus quod,
+            dicta quae, iusto quas aliquid atque dolorem omnis sunt suscipit ut nisi modi saepe eveniet quibusdam ipsam?
+        </p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aspernatur perferendis repellendus quod,
+            dicta quae, iusto quas aliquid atque dolorem omnis sunt suscipit ut nisi modi saepe eveniet quibusdam ipsam?
+        </p>
+
+
+        <div id="caja">
+            soy una caja
+        </div>
+    
+    </div>
+
+
+  
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="flowtype/flowtype.js"></script>
+    <script>
+        $('body').flowtype({
+            minimum: 360,
+            maximum: 1200,
+            minFont: 24,
+            maxFont: 20,
+            fontRatio: 30,
+        });
+    </script>
+
+<script>
+
+    $(document).ready(function(){
+
+            let caja = $("#caja");
+
+        /* caja.mouseover(function(){
+            $(this).css("background", "green");
+        });
+
+        caja.mouseout(function(){
+            $(this).css("background", "red");
+        }); */
+
+        function cambiarVerde(){
+            
+            $(this).css("background", "Green");
+        }
+
+        function cambiarRojo(){
+            
+            $(this).css("background", "red");
+        }
+
+        caja.hover(cambiarRojo, cambiarVerde);
+
+        caja.click(function(){
+            $(this).css("background", "blue")
+                   .css("color", "white");
+        });
+
+    });
+
+
+
+</script>
+
+
+</body>
+
+</html>

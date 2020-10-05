@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="autor" content="Sebastian Lagos Hernandez">
+    <title>Ejercicio 9 JS</title>
+</head>
+
+<body onLoad="myOnLoad()">
+
+    <form action="#" method="post" id="formulario">
+        <p>Nombre: <input type="text" name="nombre" size="40" id="nombre"></p>
+        <p>Edad: <input type="text" name="edad" size="40" id="edad"></p>
+        <p>Ciudad: <input type="text" name="ciudad" size="40" id="ciudad"></p>
+        <label for="pecado">Seleciona un pecado digital:</label>
+
+        <select name="pecados" id="pecado">
+            <option selected="true" disabled="disabled">Seleccione un pecado...</option>
+        </select>
+
+        <input type="submit" value="Enviar" onchange="penitencias();">
+    </form>
+
+
+    <script>
+        //Codigo a Ejecutar al Cargar la Pagina
+        function myOnLoad() {
+            cargar_pecados();
+        }
+
+        // funcion para Cargar pecados al campo <select>
+        function cargar_pecados() {
+            var array = [
+                "Copy/paste sin leer",
+                "Hackear la cuenta del pololo/a",
+                "Crackear software propietrio",
+                "Crackear software propietrio",
+                "Formatear sin respaldar"
+            ];
+
+            // Ordena el Array Alfabeticamente
+            array.sort();
+
+            addOptions("pecados", array);
+
+            //  agregar opciones a un <select>
+            function addOptions(domElement, array) {
+
+                var select = document.getElementsByName(domElement)[0];
+
+                for (value in array) {
+                    var option = document.createElement("option");
+                    option.text = array[value];
+                    option.setAttribute('value', [value]);
+                    select.add(option);
+
+
+                }
+
+
+
+            }
+
+            function penitencias() {
+
+                for (i = 0; i < value[0].length; i++) {
+
+                    if (optiovalue == 1) {
+                        console.log("Su penitencia es: 1");
+                    }
+                    if (value == 2) {
+                        console.log("Su penitencia es: 2");
+                    }
+                    if (value == 3) {
+                        console.log("Su penitencia es: 3");
+                    }
+                    if (value == 4) {
+                        console.log("Su penitencia es: 4");
+                    }
+
+                }
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

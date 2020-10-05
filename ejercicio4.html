@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<meta name="author" content="Sebastian Lagos" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+
+
+<body>
+    
+    <script>
+        function repetir(){
+            // consulta para ingresar un nombre
+            var nombre = prompt('Ingresa un nombre');
+            // consulta para ingresar un numero
+            var repetir = parseInt(prompt('Ingrese un numero de repeticiones'));
+            for(i=1 ; i <= repetir ; i++){ // desde que i vale 1 hasta que i es menor o igual al numero que ingresa. //
+                // Descomentar para utilizar sin numero //
+                // document.write("<h1>" +  nombre + "</h1>"); 
+                document.write("<h1>" + i + nombre + "</h1>");
+            }
+        }
+        repetir();
+    </script>
+
+
+</body>
+</html>

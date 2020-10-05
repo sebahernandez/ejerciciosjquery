@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullwidth</title>
+
+    <style>
+        img{
+            width: 100%;
+        }
+        .container{
+            max-width: 800px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        /* Hack posicionamiento de imagen full dentro de container */
+        .fullwidth-image{
+            position: relative;
+            right:50%;
+            left:50%;
+            margin-right:-50vw;
+            margin-left:-50vw;
+            width: 100vw;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis optio ea eius nihil earum iste,
+            possimus obcaecati eaque unde quos culpa, cumque exercitationem expedita dolorum! Excepturi numquam quidem
+            sequi quam.
+        </p>
+
+    <div class="fullwidth-image">
+        <img src="https://placeimg.com/1280/700/animals" alt="imagen">
+    </div>
+
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis optio ea eius nihil earum iste,
+            possimus obcaecati eaque unde quos culpa, cumque exercitationem expedita dolorum! Excepturi numquam quidem
+            sequi quam.
+        </p>
+
+    </div>
+
+
+</body>
+
+</html>

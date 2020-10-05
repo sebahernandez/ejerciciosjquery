@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<meta name="author" content="Sebastian Lagos" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+
+
+<body>
+
+    <script>
+
+        function buscaPalabra() {
+            // Definimos una lista de elementos en 1 array
+            var frutas = ["Manzanas","Peras","Sandías","Platanos","Guanábana","Uvas"];
+            // Consulta por un array temporal en primera instancia recorriendo.
+            var palabras = " ";
+            // Recorre el array consultando por el largo.
+            frutas.forEach(function(palabra){
+                if (palabra.length > palabras.length) {
+                    palabras = palabra
+                };
+            });
+            // Sacamos en pantalla
+            document.write("<p> La palabras más larga es : "+ palabras + "</p>");
+            document.write("<p> y cuantidad de caracteres es : " + palabras.length + "</p>");
+        };
+
+        buscaPalabra();
+
+
+    </script>
+
+
+</body>
+
+</html>
