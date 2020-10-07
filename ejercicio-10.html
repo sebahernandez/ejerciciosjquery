@@ -19,23 +19,53 @@
 
         <h2>FRASE EDITADA: </h2>
 
-        <p style="font-size:2em"> <span id="sustantivo">Juan</span> se <span id="verbo_sentia">sentía</span> <span
-                id="calificativo_solo"> solo</span>, <span id="verbo_volvia">
-                volvía</span> <span id="ingresa_adverbio">a su departamento</span> , y el
-            <span id="cambia_silencio"> <span class="campo_checkButton">silencio</span> </span> <span class="campo_checkButton3">era</span>  el <span
-                id="calificativo_unico">único </span> que lo <span id="verbo_esperaba">esperaba</span>.
-            Juan <span id="verbo_estaba_1">estaba</span> <span id="calificativo_triste">triste</span> , Juan <span
-                id="verbo_estaba_2">estaba</span> <span id="calificativo_solo2">solo</span> , muy <span
-                id="calificativo_solo3">solo</span>. Y
-            Juan <span id="verbo_tuvo">tuvo</span> una <span id="calificativo_brillante">brillante</span>
-             <span class="campo_checkButton2">idea:</span>  </p>
+        <p style="font-size:2em"> 
+            <span id="sustantivo_1">Juan</span> se 
+            <span id="verbo_sentia">sentía</span>
+            <span id="calificativo_solo"> solo</span>, 
+            <span id="verbo_volvia"> volvía</span> 
+            <span id="ingresa_adverbio">a su departamento</span> , y el
+            <span class="campo_checkButton">silencio</span>
+            <span class="campo_checkButton3">era</span> el 
+            <span id="calificativo_unico">único </span>que lo 
+            <span id="verbo_esperaba">esperaba</span>. 
+            <span id="sustantivo_2"> Juan </span>  
+            <span id="verbo_estaba_1">estaba</span> 
+            <span id="calificativo_triste">triste</span> ,
+            <span id="sustantivo_3" class="sustantivo">Juan</span> 
+            <span id="verbo_estaba_2">estaba</span>
+            <span id="calificativo_solo2">solo</span> , muy 
+            <span id="calificativo_solo3">solo</span>. Y 
+            <span id="sustantivo_4">Juan</span>  
+            <span id="verbo_tuvo">tuvo</span> una 
+            <span id="calificativo_brillante">brillante idea:</span>
+           
+        </p>
+
+            <h2>La idea de juan:</h3>
+            <h3 id="idea"></h3> 
 
         <form id="frase" action="#">
             <fieldset>
                 <legend>EDITA LA FRASE ORIGINAL:</legend>
-                <!-- Cambia el sustantivo propio-->
-                <label for="adjetivo">Cambia el Sustantivo propio:</label><br>
+                <!-- Cambia el sustantivo propio 1-->
+                <label for="sustantivo">Cambia el Sustantivo propio 1:</label><br>
                 <input type="text" id="ingresa_sustantivo" onkeyup="FunctionCambiar()" size=50><br>
+                <br>
+
+                <!-- Cambia el sustantivo propio 2-->
+                <label for="sustantivo">Cambia el Sustantivo propio 2:</label><br>
+                <input type="text" id="ingresa_sustantivo_2" onkeyup="FunctionCambiar()" size=50><br>
+                <br>
+
+                <!-- Cambia el sustantivo propio 3-->
+                <label for="sustantivo">Cambia el Sustantivo propio 3:</label><br>
+                <input type="text" id="ingresa_sustantivo_3" onkeyup="FunctionCambiar()" size=50><br>
+                <br>
+
+                <!-- Cambia el sustantivo propio 4-->
+                <label for="sustantivo">Cambia el Sustantivo propio 4:</label><br>
+                <input type="text" id="ingresa_sustantivo_4" onkeyup="FunctionCambiar()" size=50><br>
                 <br>
 
                 <!-- Cambia el verbo sentía-->
@@ -48,17 +78,11 @@
                 <input type="text" id="ingresa_verbo_volvia" onkeyup="FunctionCambiar()" size=50><br>
                 <br>
 
-
                 <!-- Cambia el adverbio de lugar-->
-                <label for="verbo">Cambia el verbo(a su departamento):</label><br>
+                <label for="adverbio">Cambia el adverbio de (a su departamento):</label><br>
                 <input type="text" id="ingresa_adverbio_lugar" onkeyup="FunctionCambiar()" size=50><br>
                 <br>
 
-
-                <!-- Cambia el verbo esperaba-->
-                <label for="verbo">Cambia el verbo (Esperaba):</label><br>
-                <input type="text" id="ingresa_verbo_esperaba" onkeyup="FunctionCambiar()" size=50><br>
-                <br>
                 <!-- Cambia el verbo estaba-->
                 <label for="verbo">Cambia el verbo (Estaba):</label><br>
                 <input type="text" id="ingresa_verbo_estaba1" onkeyup="FunctionCambiar()" size=50><br>
@@ -73,52 +97,35 @@
                 <br>
 
                 <!-- Cambia el adjetivo calificativo solo-->
-                <label for="verbo">Cambia el adjetivo calificativo (Primer Solo):</label><br>
+                <label for="calificativo">Cambia el adjetivo calificativo (Primer Solo):</label><br>
                 <input type="text" id="ingresa_calificativo_solo" onkeyup="FunctionCambiar()" size=50><br>
                 <br>
 
                 <!-- Cambia el adjetivo calificativo solo2-->
-                <label for="verbo">Cambia el adjetivo calificativo (Segundo Solo):</label><br>
+                <label for="calificativo">Cambia el adjetivo calificativo (Segundo Solo):</label><br>
                 <input type="text" id="ingresa_calificativo_solo2" onkeyup="FunctionCambiar()" size=50><br>
                 <br>
 
                 <!-- Cambia el adjetivo calificativo solo3-->
-                <label for="verbo">Cambia el adjetivo calificativo (Tercer Solo):</label><br>
+                <label for="calificativo">Cambia el adjetivo calificativo (Tercer Solo):</label><br>
                 <input type="text" id="ingresa_calificativo_solo3" onkeyup=" FunctionCambiar()" size=50><br>
                 <br>
 
                 <!-- Cambia el adjetivo calificativo triste-->
-                <label for="verbo">Cambia el adjetivo calificativo (Triste):</label><br>
+                <label for="calificativo">Cambia el adjetivo calificativo (Triste):</label><br>
                 <input type="text" id="ingresa_calificativo_triste" onkeyup="FunctionCambiar()" size=50><br>
                 <br>
                 <!-- Cambia el adjetivo calificativo brillante-->
-                <label for="verbo">Cambia el adjetivo calificativo (Brillante):</label><br>
+                <label for="calificativo">Cambia el adjetivo calificativo (Brillante idea):</label><br>
                 <input type="text" id="ingresa_calificativo_brillante" onkeyup="FunctionCambiar()" size=50><br>
                 <br>
-                <!-- Cambia el adjetivo calificativo unico-->
-                <label for="verbo">Cambia el adjetivo calificativo (Único):</label><br>
-                <input type="text" id="ingresa_calificativo_unico" onkeyup="FunctionCambiar()" size=50><br>
+              
+
+                <!-- Cambia idea de juan-->
+                <label for="idea">¿Qué idea tuvo juan?:</label><br>
+                <input type="text" id="idea_de_juan" onkeyup="FunctionCambiar()" size=50><br>
                 <br>
 
-                <!-- Eligue el sustantivo de silencio-->
-                <label for="silencio">Cambia (silencio):</label>
-                <br>
-                <label><input type="radio" name="silencio" class="radio" value="tranquilidad">Tranquilidad<label>
-                <label><input type="radio" name="silencio" class="radio" value="prudencia">Prudencia<label>
-                <label><input type="radio" name="silencio" class="radio" value="discreción">Discreción<label>
-                    <br>
-                    <br>
-                <label for="triste">Cambia (idea):</label>
-                <br>
-                <label><input type="radio" name="idea" class="radio2" value="plan">Plan<label>
-                <label><input type="radio" name="idea" class="radio2" value="propósito">Propósito<label>
-                <label><input type="radio" name="idea" class="radio2" value="pensamiento">Pensamiento<label>
-
-                    <br>
-                    <br>
-                <label for="triste">Cambia (era):</label>
-                <br>
-                <label><input type="radio" name="era" class="radio3" value="fue">Fue<label>
 
             </fieldset>
         </form>
@@ -130,12 +137,49 @@
         function FunctionCambiar() {
 
 
-            // cambia sustantivo propio
+            // cambia sustantivo propio 1
             var sustantivo = document.getElementById("ingresa_sustantivo").value;
+
             if (sustantivo.trim() != '') {
-                document.getElementById("sustantivo").textContent = sustantivo;
-                document.getElementById("sustantivo").style.background = "#d1f0ff";
+               
+                document.getElementById("sustantivo_1").textContent = sustantivo;
+                document.getElementById("sustantivo_1").style.background = "#c2eeff";
+
             }
+
+
+            // cambia sustantivo propio 2
+            var sustantivo2 = document.getElementById("ingresa_sustantivo_2").value;
+
+            if (sustantivo2.trim() != '') {
+            
+                document.getElementById("sustantivo_2").textContent = sustantivo2;
+                document.getElementById("sustantivo_2").style.background = "#c2eeff";
+
+            }
+
+
+            // cambia sustantivo propio 3
+            var sustantivo3 = document.getElementById("ingresa_sustantivo_3").value;
+
+            if (sustantivo3.trim() != '') {
+            
+                document.getElementById("sustantivo_3").textContent = sustantivo3;
+                document.getElementById("sustantivo_3").style.background = "#c2eeff";
+
+            }
+
+
+            // cambia sustantivo propio 4
+            var sustantivo4 = document.getElementById("ingresa_sustantivo_4").value;
+
+            if (sustantivo4.trim() != '') {
+            
+                document.getElementById("sustantivo_4").textContent = sustantivo4;
+                document.getElementById("sustantivo_4").style.background = "#c2eeff";
+
+            }
+
 
             // cambia adverbio lugar
             var adverbio = document.getElementById("ingresa_adverbio_lugar").value;
@@ -143,7 +187,6 @@
                 document.getElementById("ingresa_adverbio").textContent = adverbio;
                 document.getElementById("ingresa_adverbio").style.background = "#ff9991";
             }
-
 
             // cambia verbo volvia
             var verbo = document.getElementById("ingresa_verbo_volvia").value;
@@ -157,13 +200,6 @@
             if (verbo.trim() != '') {
                 document.getElementById("verbo_sentia").textContent = verbo;
                 document.getElementById("verbo_sentia").style.background = "#ebffdb";
-            }
-
-            // cambia verbo esperaba
-            var verbo = document.getElementById("ingresa_verbo_esperaba").value;
-            if (verbo.trim() != '') {
-                document.getElementById("verbo_esperaba").textContent = verbo;
-                document.getElementById("verbo_esperaba").style.background = "#ebffdb";
             }
 
             // cambia verbo estaba 1
@@ -223,50 +259,18 @@
                 document.getElementById("calificativo_brillante").style.background = "#e9d4ff";
             }
 
-            // cambia abjetivos calificativos único
-            var calificativos = document.getElementById("ingresa_calificativo_unico").value;
-            if (calificativos.trim() != '') {
-                document.getElementById("calificativo_unico").textContent = calificativos;
-                document.getElementById("calificativo_unico").style.background = "#e9d4ff";
+           
+            // cambia idea de juan
+            var idea = document.getElementById("idea_de_juan").value;
+            if (idea.trim() != '') {
+                document.getElementById("idea").textContent = idea;
+                document.getElementById("idea").style.background = "green";
+                document.getElementById("idea").style.color = "white";
+                document.getElementById("idea").style.padding = "20px";
             }
 
         }
-        // Silencio:
-        // Utilizo let de ES6 para poder recorrer las cada radio con un for y querySelectorALL
-        let radio = document.querySelectorAll(".radio");
-        let campo_checkButton = document.querySelector(".campo_checkButton");
-
-            for (let i = 0; i < radio.length; i++) {
-                radio[i].addEventListener("click", function () {
-                    campo_checkButton.textContent = radio[i].value;
-                    document.querySelector(".campo_checkButton").style.background = "#b0fffb";
-                });
-        }
-
-        // Idea:
-        // Utilizo let de ES6 para poder recorrer las cada radio con un for y querySelectorALL
-        let radio2 = document.querySelectorAll(".radio2");
-        let campo_checkButton2 = document.querySelector(".campo_checkButton2");
-
-            for (let i = 0; i < radio2.length; i++) {
-                radio2[i].addEventListener("click", function () {
-                    campo_checkButton2.textContent = radio2[i].value;
-                    document.querySelector(".campo_checkButton2").style.background = "#b0fffb";
-                });
-        }
-
-        // Era:
-        // Utilizo let de ES6 para poder recorrer las cada radio con un for y querySelectorALL
-        let radio3 = document.querySelectorAll(".radio3");
-        let campo_checkButton3 = document.querySelector(".campo_checkButton3");
-
-            for (let i = 0; i < radio3.length; i++) {
-                radio3[i].addEventListener("click", function () {
-                    campo_checkButton3.textContent = radio3[i].value;
-                    document.querySelector(".campo_checkButton3").style.background = "#b0fffb";
-                });
-        }
-
+        
 
     </script>
 
