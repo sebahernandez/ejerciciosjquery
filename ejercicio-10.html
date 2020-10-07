@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 10 </title>
+    <meta name="autor" content="Sebastian Lagos Hernandez">
+    <title>Ejercicio 10 JS </title>
 </head>
 
 <body>
@@ -16,25 +17,22 @@
             esperaba. Juan estaba triste
             , Juan estaba solo , muy solo. Y Juan tuvo una brillante idea:</p>
 
-
         <h2>FRASE EDITADA: </h2>
-
-
 
         <p style="font-size:2em"> <span id="sustantivo">Juan</span> se <span id="verbo_sentia">sentía</span> <span
                 id="calificativo_solo"> solo</span>, <span id="verbo_volvia">
-                volvía</span> a su departamento, y el
-            <span id="cambia_silencio">silencio </span> era el <span id="calificativo_unico">único </span> que lo <span
-                id="verbo_esperaba">esperaba</span>.
+                volvía</span> <span id="ingresa_adverbio">a su departamento</span> , y el
+            <span id="cambia_silencio"> <span class="campo_checkButton">silencio</span> </span> <span class="campo_checkButton3">era</span>  el <span
+                id="calificativo_unico">único </span> que lo <span id="verbo_esperaba">esperaba</span>.
             Juan <span id="verbo_estaba_1">estaba</span> <span id="calificativo_triste">triste</span> , Juan <span
                 id="verbo_estaba_2">estaba</span> <span id="calificativo_solo2">solo</span> , muy <span
                 id="calificativo_solo3">solo</span>. Y
             Juan <span id="verbo_tuvo">tuvo</span> una <span id="calificativo_brillante">brillante</span>
-            idea:</p>
+             <span class="campo_checkButton2">idea:</span>  </p>
 
         <form id="frase" action="#">
             <fieldset>
-                <legend>Edita la frase:</legend>
+                <legend>EDITA LA FRASE ORIGINAL:</legend>
                 <!-- Cambia el sustantivo propio-->
                 <label for="adjetivo">Cambia el Sustantivo propio:</label><br>
                 <input type="text" id="ingresa_sustantivo" onkeyup="FunctionCambiar()" size=50><br>
@@ -49,7 +47,14 @@
                 <label for="verbo">Cambia el verbo(volvía):</label><br>
                 <input type="text" id="ingresa_verbo_volvia" onkeyup="FunctionCambiar()" size=50><br>
                 <br>
-                
+
+
+                <!-- Cambia el adverbio de lugar-->
+                <label for="verbo">Cambia el verbo(a su departamento):</label><br>
+                <input type="text" id="ingresa_adverbio_lugar" onkeyup="FunctionCambiar()" size=50><br>
+                <br>
+
+
                 <!-- Cambia el verbo esperaba-->
                 <label for="verbo">Cambia el verbo (Esperaba):</label><br>
                 <input type="text" id="ingresa_verbo_esperaba" onkeyup="FunctionCambiar()" size=50><br>
@@ -68,17 +73,17 @@
                 <br>
 
                 <!-- Cambia el adjetivo calificativo solo-->
-                <label for="verbo">Cambia el adjetivo calificativo (Solo):</label><br>
+                <label for="verbo">Cambia el adjetivo calificativo (Primer Solo):</label><br>
                 <input type="text" id="ingresa_calificativo_solo" onkeyup="FunctionCambiar()" size=50><br>
                 <br>
 
                 <!-- Cambia el adjetivo calificativo solo2-->
-                <label for="verbo">Cambia el adjetivo calificativo (Solo 2):</label><br>
+                <label for="verbo">Cambia el adjetivo calificativo (Segundo Solo):</label><br>
                 <input type="text" id="ingresa_calificativo_solo2" onkeyup="FunctionCambiar()" size=50><br>
                 <br>
 
                 <!-- Cambia el adjetivo calificativo solo3-->
-                <label for="verbo">Cambia el adjetivo calificativo (Solo 3):</label><br>
+                <label for="verbo">Cambia el adjetivo calificativo (Tercer Solo):</label><br>
                 <input type="text" id="ingresa_calificativo_solo3" onkeyup=" FunctionCambiar()" size=50><br>
                 <br>
 
@@ -96,30 +101,24 @@
                 <br>
 
                 <!-- Eligue el sustantivo de silencio-->
-                <label for="silencio">Seleccione un sustantivo para (silencio):</label><br>
-                <input type="checkbox" id="disimulo">
-                <label for="disimulo"> disimulo</label><br>
+                <label for="silencio">Cambia (silencio):</label>
+                <br>
+                <label><input type="radio" name="silencio" class="radio" value="tranquilidad">Tranquilidad<label>
+                <label><input type="radio" name="silencio" class="radio" value="prudencia">Prudencia<label>
+                <label><input type="radio" name="silencio" class="radio" value="discreción">Discreción<label>
+                    <br>
+                    <br>
+                <label for="triste">Cambia (idea):</label>
+                <br>
+                <label><input type="radio" name="idea" class="radio2" value="plan">Plan<label>
+                <label><input type="radio" name="idea" class="radio2" value="propósito">Propósito<label>
+                <label><input type="radio" name="idea" class="radio2" value="pensamiento">Pensamiento<label>
 
-                <input type="checkbox" id="misterio">
-                <label for="misterio"> misterio</label><br>
-
-                <input type="checkbox" id="discrecion">
-                <label for="discrecion"> discreción</label><br>
-
-
-                <!-- Eligue el sustantivo de idea-->
-                <label for="silencio">Seleccione un sustantivo para (idea):</label><br>
-                <input type="checkbox" id="disimulo">
-                <label for="disimulo"> disimulo</label><br>
-
-                <input type="checkbox" id="misterio">
-                <label for="misterio"> misterio</label><br>
-
-                <input type="checkbox" id="discrecion">
-                <label for="discrecion"> discreción</label><br>
-
-
-
+                    <br>
+                    <br>
+                <label for="triste">Cambia (era):</label>
+                <br>
+                <label><input type="radio" name="era" class="radio3" value="fue">Fue<label>
 
             </fieldset>
         </form>
@@ -137,6 +136,14 @@
                 document.getElementById("sustantivo").textContent = sustantivo;
                 document.getElementById("sustantivo").style.background = "#d1f0ff";
             }
+
+            // cambia adverbio lugar
+            var adverbio = document.getElementById("ingresa_adverbio_lugar").value;
+            if (adverbio.trim() != '') {
+                document.getElementById("ingresa_adverbio").textContent = adverbio;
+                document.getElementById("ingresa_adverbio").style.background = "#ff9991";
+            }
+
 
             // cambia verbo volvia
             var verbo = document.getElementById("ingresa_verbo_volvia").value;
@@ -223,8 +230,44 @@
                 document.getElementById("calificativo_unico").style.background = "#e9d4ff";
             }
 
-
         }
+        // Silencio:
+        // Utilizo let de ES6 para poder recorrer las cada radio con un for y querySelectorALL
+        let radio = document.querySelectorAll(".radio");
+        let campo_checkButton = document.querySelector(".campo_checkButton");
+
+            for (let i = 0; i < radio.length; i++) {
+                radio[i].addEventListener("click", function () {
+                    campo_checkButton.textContent = radio[i].value;
+                    document.querySelector(".campo_checkButton").style.background = "#b0fffb";
+                });
+        }
+
+        // Idea:
+        // Utilizo let de ES6 para poder recorrer las cada radio con un for y querySelectorALL
+        let radio2 = document.querySelectorAll(".radio2");
+        let campo_checkButton2 = document.querySelector(".campo_checkButton2");
+
+            for (let i = 0; i < radio2.length; i++) {
+                radio2[i].addEventListener("click", function () {
+                    campo_checkButton2.textContent = radio2[i].value;
+                    document.querySelector(".campo_checkButton2").style.background = "#b0fffb";
+                });
+        }
+
+        // Era:
+        // Utilizo let de ES6 para poder recorrer las cada radio con un for y querySelectorALL
+        let radio3 = document.querySelectorAll(".radio3");
+        let campo_checkButton3 = document.querySelector(".campo_checkButton3");
+
+            for (let i = 0; i < radio3.length; i++) {
+                radio3[i].addEventListener("click", function () {
+                    campo_checkButton3.textContent = radio3[i].value;
+                    document.querySelector(".campo_checkButton3").style.background = "#b0fffb";
+                });
+        }
+
+
     </script>
 
 
