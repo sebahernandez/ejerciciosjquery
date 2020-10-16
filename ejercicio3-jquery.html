@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Sebastian Lagos" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 jquery</title>
+
+    <style>
+        #caja {
+            width: 200px;
+            height: 200px;
+            float: left;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>Generar una página que, desde un formulario con dos campos, solicite alto y ancho. Con estos datos modificar los
+        dos
+        ejes de un Div azul de 200x200px.</p>
+
+    <form>
+        Ingresa el ancho: <input type="text" id="ancho" placeholder="Ingresa Ancho"><br><br>
+        Ingresa el alto: <input type="text" id="alto" placeholder="Ingresa Alto">
+    </form>
+    <br>
+    <p>Click en la caja para cambiar su tamaño</p>
+    <div id="caja"> </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        $(document).ready(function () {
+
+            $("#alto").blur(function () {
+                var ancho = $(this).val();
+                $('#caja').width(ancho);
+            });
+
+
+            $("#alto").blur(function () {
+
+                var alto = $(this).val();
+                $('#caja').height(alto);
+              
+            });
+        });
+    </script>
+
+</body>
+
+</html>
