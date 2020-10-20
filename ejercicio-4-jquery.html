@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta meta="author" content="sebastian lagos">
+    <title>Ejercicio 4 Jquery</title>
+</head>
+<style>
+    .container {
+      margin: 0 auto;
+      width: 550px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      padding: 10px 0px;
+    }
+
+    select,
+    input {
+      padding: 16px 0px;
+      text-indent: 10px;
+    }
+
+    .caja {
+      width: 200px;
+      height: 200px;
+      background: red;
+      border: 10px solid black;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <p>
+      Utilizando funciones de CSS de jQuery generar un formulario que controle
+      el color de fondo, color del borde, tamaño de un div de 200x200px de
+      color rojo.
+    </p>
+
+    <form action="">
+      <!-- selecciona un color de fondo -->    
+      <label for="color-fondo"> Selecciona un color de fondo </label>
+      <select name="color_fondo" id="fondo">
+        <option value="" selected disabled>-- Selecciona Color --</option>
+        <option value="green">Verde</option>
+        <option value="yellow">Amarillo</option>
+        <option value="red">Rojo</option>
+      </select>
+      <!-- selecciona una color de borde -->
+      <label for="color-borde"> Selecciona un color de borde </label>
+      <select name="color_borde" id="borde">
+        <option value="" selected disabled>-- Selecciona Color --</option>
+        <option value="green">Verde</option>
+        <option value="yellow">Amarillo</option>
+        <option value="red">Rojo</option>
+      </select>
+      <!-- Cambiar el ancho -->     
+      <label for="ancho">Cambia el ancho</label>
+      <input type="text" id="ancho" />
+      <!-- Cambiar el alto -->    
+      <label for="alto">Cambia el alto</label>
+      <input type="text" id="alto" />
+    </form>
+
+    <div class="caja"></div>
+  </div>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    // Iniciamos jquery
+    $(document).ready(function() {
+      $("#fondo").change(function() {
+        var color = $("option:selected", this).val(); // Capturamos el valor de input y se lo asignamos a la variable
+        $(".caja").css("background-color", color);
+      });
+      // Con la método change detectamos el valor de y lo asignamos a la clase caja
+      $("#borde").change(function() {
+        var borde = $("option:selected", this).val(); // capturamos el valor de input y se lo asignamos a la variable
+        $(".caja").css("border-color", borde);
+      });
+      // Con el método blur aplicamos el cambio de tamaño una vez que salimos del formulario
+      $("#ancho").blur(function() {
+        var ancho = $(this).val(); // capturamos el valor de input y se lo asignamos a la variable
+        $(".caja").width(ancho);
+      });
+      // Con el método blur aplicamos el cambio de tamaño una vez que salimos del formulario
+      $("#alto").blur(function() {
+        var alto = $(this).val(); // Capturamos el valor de input y se lo asignamos a la variable
+        $(".caja").height(alto);
+      });
+    });
+  </script>
+
+</body>
+</html>
