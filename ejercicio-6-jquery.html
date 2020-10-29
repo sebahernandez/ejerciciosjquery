@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+    <meta name="author" content="Sebastian Lagos">
+    <title>Ejercicio 6 jQuery </title>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Heebo:900");
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Heebo', sans-serif;
+            background-image: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
+        }
+
+        p {
+            color: #2c0017;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3rem;
+        }
+
+        h2,
+        h3 {
+            margin: 0;
+            padding: 0;
+            font-size: 7rem;
+            line-height: 1;
+            letter-spacing: .3rem;
+            color: #253057;
+        }
+
+        p.desc {
+            padding: 1rem;
+            font-size: 1rem;
+            letter-spacing: .2rem;
+            opacity: 0;
+            transition: 2s 1.5s;
+        }
+
+        @media screen and (max-width: 450px) {
+            p {
+                font-size: 3rem;
+            }
+
+            p.desc {
+                font-size: .5rem;
+            }
+        }
+
+        .ex1 {
+            opacity: 0;
+            perspective: 200px;
+        }
+
+        .ex1 span {
+            transform: rotateY(-90deg);
+            opacity: 0;
+        }
+
+        .ex2 {
+            opacity: 0;
+            perspective: 200px;
+        }
+
+        .ex2 span {
+            transform: rotateY(-90deg) rotateX(45deg);
+            transform-origin: -50% 75%;
+            opacity: 0;
+        }
+
+        a {
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container py-5 historia">
+        <h2 class="ex1 text-center">Mi dia en el </h2>
+        <h3 class="ex2 text-center">PLEBICITO</h3>
+        <p class="desc text-center">- Por Sebastián Lagos -</p>
+
+        <div class="text-center">
+            <button class="btn btn-light" id="ver1">Ver capitulo 1</button>
+        </div>
+        <section id="capitulo1" class="py-5">
+
+            <span class="my-2">CAPITULO 1</span>
+            <article>
+                <p class="py-3">
+                    Aquel Domingo me levanté muy temprano en la mañana para terminar un trabajo semanal del profesor
+                    LuisFelipe
+                    y así poder tener toda la tarde disponible para ir a votar, no quise asistir a mi local de votación
+                    temprano
+                    para no ser
+                    vocal de mesa, que aunque igual me llama la atención no podía serlo ya que por tiempo necesitaba
+                    optimizar
+                    mi día.
+
+                </p>
+
+                <p>
+                    Continuando mi día... Luego de terminar todo, comenzó mi preparación para uno de los momentos más
+                    importantes en la historia
+                    como chilenos en democracia.
+                    Tomé mi mascarilla, le pegue una llamada a mi vecino Gilbert , que a todo esto es uno de mis
+                    amigos de la
+                    infancia y con el cual también compartimos el amor por nuestra amada Universidad de Chile, pero
+                    bueno
+                    ese es
+                    cuento aparte.
+                </p>
+            </article>
+
+            <button class="btn btn-light" id="ver2">Ver capitulo 2</button>
+        </section>
+
+        <section id="capitulo2" class="py-5">
+            <span class="my-2">CAPITULO 2</span>
+            <article>
+                <p class="py-3">
+                    Salgo de mi casa, en un barrio de puros viejos complicados, un barrio privilegiado por la ubicación,
+                    ya
+                    que
+                    durante muchos años pertenecio a la famosa fábrica Bata.
+
+                </p>
+
+                <p> Caminando hacia el auto de mi vecino para emprender rumbo al colegio "Republica de Brasil" ,
+                    inspirado,
+                    con ganas de cambiar el mundo,con ganas de decir en un papel tantas cosas que uno tiene guardado.
+
+                </p>
+
+                <p>
+                    Mientras estaba en la fila miles de cosas ocurrían, pero yo tenia que votar igual!
+                </p>
+            </article>
+
+            <button id="gif1" class="btn btn-light">Mi vecino queria votar primero &#128530;</button>
+
+
+            <figure id="vecino-gilbert">
+                <img src="https://media1.tenor.com/images/0fffc8f7035e85c2b340c8b96982d75d/tenor.gif?itemid=13136701"
+                    alt="plebicito" class="img-fluid py-3">
+                <div> <button id="gif2" class="btn btn-light">¿Quieres saber lo que paso despues? &#128526; </button>
+                </div>
+            </figure>
+
+            <article class="text-center py-5" id="votar2">
+                <p> Luego de estar presente en la fila por muy poco tiempo y aunque mi amigo Gilbert intentara quitarme
+                    mi
+                    puesto, </p>
+                <h2 class="text-center">¡Al fin pude votar!...</h2>
+                <figure class="text-center">
+                    <img src="https://media1.tenor.com/images/07e92295d21656d2a507514335d72f40/tenor.gif?itemid=12451002"
+                        alt="voto" class="img-fluid py-3">
+                </figure>
+                <button class="btn btn-light" id="ver3">Ver capitulo 3</button>
+            </article>
+
+
+        </section>
+
+        <section id="capitulo3">
+            <article>
+                <span>CAPITULO 3</span>
+                <p class="py-3"> Al encontrarnos en la salida del colegio, nos dirigimos a su auto que estaba
+                    estacionado en unas
+                    calles cercanas y decidimos tomar la ruta de Av.Miraflores
+                    para luego devolvernos, ya que estaba colapsado de autos, la locomocion era un caos pero nadie
+                    estaba
+                    enojado, todos esperaban pacientes a sabiendas de que
+                    sería un día para recordar.
+                </p>
+
+                <img src="https://www.sectorcine.com/wp-content/uploads/sectorcine/2017/04/11/rapidos-y-furiosos-trafico.gif"
+                    alt="autos" class="img-fluid py-3">
+
+                <p>
+                    Una vez que llegue a casa despues de tres horas, sentí la satisfacción más grande del mundo, saber
+                    que mishijos podrán vivir en un lugar mejor,
+                    en un Chile diferente, en donde las oportunidades sean para todos por igual y nos conduzcan alcamino
+                    deldesarrollo.
+                </p>
+
+                <img src="https://media1.tenor.com/images/f88731e4496050fc2eb0f6c27019e1e3/tenor.gif?itemid=11548590"
+                    alt="felicidad" class="img-fluid py-3">
+
+            </article>
+
+            <p>¿Quieres saber si vote por el apruebo o rechazo?</p>
+
+
+            <button class="btn btn-light my-3" id="btn">Ver VOTO</button>
+
+            <div class="alert alert-warning fade out" id="alert1">
+                <strong>Hey! Pillin.</strong> El voto es privado, pero ya tienes una idea :)
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <div aria-hidden="true">&times;</div>
+                </button>
+            </div>
+
+        </section>
+
+
+
+    </div>
+    <!-- fin de container -->
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+
+
+
+    <script>
+        // PLUGIN JQUERY TEXTY INSERTADO.
+        // Funcion que permite la animacion de texto entregando diferentes parametros por medio de callbacks o funciones.
+        // Esto es un plugin de Jquery llamado Texty Jquery.
+        (function ($) {
+            $.fn.textyleF = function (options) {
+                var target = this;
+                var targetTxt = target.contents();
+                var defaults = {
+                    duration: 1000,
+                    delay: 150,
+                    easing: 'ease',
+                    callback: null
+                };
+                var setting = $.extend(defaults, options);
+                //split
+                targetTxt.each(function () {
+                    var texts = $(this);
+                    if (this.nodeType === 3) {
+                        mkspn(texts);
+                    }
+                });
+
+                function mkspn(texts) {
+                    texts.replaceWith(texts.text().replace(/(\S)/g, '<span>$1</span>'));
+                }
+                //txt animación
+                return this.each(function (i) {
+                    var child = target.children('span');
+                    target.css('opacity', 1);
+                    child.css('display', 'inline-block');
+                    child.each(function (i) {
+                        $(this).delay(setting.delay * i)
+                            .queue(function (next) {
+                                $(this).css({
+                                    transform: 'rotateY(0deg) rotateX(0deg)',
+                                    opacity: 1,
+                                    transitionDuration: setting.duration + 'ms',
+                                    transitionTimingFunction: setting.easing
+                                })
+                                next();
+                            });
+                        if (typeof setting.callback === 'function') {
+                            $(this).on('transitionend', function () {
+                                setting.callback.call(this);
+                            });
+                        }
+                    });
+                });
+            };
+        }(jQuery));
+        // Esto es un plugin de Jquery llamado Texty Jquery.
+
+
+   
+        // Llamada a los efecto de texto de plugin texty.
+        $(document).ready(function () {
+
+            $('.ex1').textyleF(); // Asignamos la función a ext1.
+            $('.ex2').textyleF({ // Asignamos la función a ext2.
+                delay: 200,
+                easing: 'cubic-bezier(0.785, 0.135, 0.15, 0.86)',
+                callback: function () { // callback donde aplica al elemento this un css.
+                    $(this).css({
+                        color: '#fff',
+                        transition: '1s',
+                    });
+                    $('.desc').css('opacity', 1); // efecto opacity durante la transición.
+                }
+            });
+
+            // Capitulos
+
+            $('#capitulo1').hide(); // Ocultamos las secciones al cargar el documento.
+            $('#capitulo2').hide(); // Ocultamos las secciones al cargar el documento.
+            $('#capitulo3').hide(); // Ocultamos las secciones al cargar el documento.
+            $('#vecino-gilbert').hide(); // Ocultamos las secciones al cargar el documento.
+            $('#votar2').hide(); // Ocultamos las secciones al cargar el documento.
+
+            $("#ver1").click(function () {
+                $('#capitulo1').fadeIn('slow').show(); // Aplicamos el efecto fadeIn.
+            });
+            $("#ver2").click(function () {
+                $('#capitulo2').fadeIn('slow').show(); // Aplicamos el efecto fadeIn.
+            });
+
+            $("#ver3").click(function () {
+                $('#capitulo3').fadeIn('slow').show(); // Aplicamos el efecto fadeIn.
+            });
+
+            $("#gif1").click(function () {
+                $('#vecino-gilbert').fadeIn('slow').show(); // Aplicamos el efecto fadeIn.
+            });
+
+            $("#gif2").click(function () {
+                $('#votar2').fadeIn('slow').show(); // Aplicamos el efecto fadeIn.
+            });
+
+            // Funcion para alert.
+            function toggleAlert() {
+                $(".alert").toggleClass(
+                    'show'); // Creamos una alarta de bootstrap para mostrar el mensaje.
+                return false;
+            }
+            // al realizar click ejecuta la función.
+            $("#btn").on("click", toggleAlert);
+            $('#alert1').on('close.bs.alert', toggleAlert);
+
+            // Traversing.
+            $(".historia").find('span').css({
+                "color": "white",
+                "background": "black",
+                "padding": "5px 5px"
+            });
+            $("span").first().css("color", "yellow");
+
+
+
+        });
+    </script>
+
+
+</body>
+
+</html>

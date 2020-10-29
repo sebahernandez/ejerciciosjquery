@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <ul id="galeria-instagram"></ul>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    var clientid = '43495044573',
+       username = 'ghostcoder_',
+       num_photos = 6;
+
+$.ajax({
+	url: 'https://api.instagram.com/v1/users/search',
+	dataType: 'jsonp',
+	type: 'GET',
+	data: {client_id: clientid, q: username},
+	success: function(data){
+		console.log(data);
+		$.ajax({
+			url: 'https://api.instagram.com/v1/users/' + data[0].id + '/media/recent',
+			dataType: 'jsonp',
+			type: 'GET',
+			data: {client_id: clientid, count: num_photos},
+			success: function(data2){
+				console.log(data2);
+				for(x in data2.data){
+					$('#galeria-instagram').append('<li><img src="'+data2.data[x].images.thumbnail.url+'"></li>');  
+				}
+    			},
+			error: function(data2){
+				console.log(data2);
+			}
+		});
+	},
+	error: function(data){
+		console.log(data);
+	}
+});
+</script>
+
+</body>
+</html>

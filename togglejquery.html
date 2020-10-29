@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ejemplo de: jQuery - Las 3 preguntas básicas: quién, cuándo, qué.</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+#caja {
+	width: 200px;
+	height: 200px;
+	border: 10px solid #000;
+	cursor: pointer;
+	/*margin: 20px;*/
+	padding: 10px;
+	background-color: #900;
+}
+.botonera {
+	padding: 5px;
+	background-color: #009;
+	border-bottom: 1px solid #000;
+}
+</style>
+</head>
+<body>
+<div id="caja"> </div>
+<div class="botonera">
+ <button id="slideDown">slideDown</button>
+ <button id="slideUp">slideUp</button>
+ <button id="slideToggle">slideToggle</button>
+</div>
+<script>
+
+$(document).ready(function(){
+	$("#slideDown").click(function(){
+		$("#caja").slideDown();
+	});
+	$("#slideUp").click(function(){
+		$("#caja").slideUp(2000);
+	});
+	$("#slideToggle").click(function(){
+		$("#caja").slideToggle('slow');
+	});
+});
+
+</script>
+</body>
+</html>

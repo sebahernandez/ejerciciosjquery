@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author"  content="sebastian lagos">
+    <title>Ejercicio 5 Jquery</title>
+
+<style>
+        .caja{
+        border: 1px solid #900;
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        }
+ </style>
+
+
+</head>
+<body>
+
+
+    <section>
+        <h1>título</h1>
+        <div class="caja"><p>abajo</p></div>
+        <div class="caja"><p>centro</p></div>
+        <div class="caja"><p>arriba</p></div>
+    </section>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+<script>
+
+$(document).ready(function() {
+    // Mueve la caja hacia el primer lugar y aplica css 
+    $('.caja').last().prependTo('section').css({'background-color':'black', 'color':'white'});
+    // Aplica prependTo para mover el h1 y sacarlo del section
+    $('h1').prependTo('body');
+    // Remueve la ultima caja.
+    $('.caja').last().remove();
+});
+
+
+
+
+</script>
+
+</body>
+</html>
