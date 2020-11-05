@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejericio 8 jquery </title>
+
+
+    <style>
+        form {
+            padding: 20px 0px;
+        }
+
+        #destino{
+            width: 500px;
+            height: 500px;
+            background-size: cover;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <form action=" ">
+
+        <select id="imagenes">
+            <option value="" selected disabled>-- Selecciona Imagen --</option>
+            <option value="https://placeimg.com/640/480/animals">imagen 1</option>
+            <option value="https://placeimg.com/640/480/arch">imagen 2</option>
+            <option value="https://placeimg.com/640/480/nature">imagen 3</option>
+            <option value="https://placeimg.com/640/480/people">imagen 4</option>
+            <option value="https://placeimg.com/640/480/tech">imagen 5</option>
+        </select>
+        <input type="submit" value="Cargar Imagen">
+
+    </form>
+
+    
+
+    <div id="destino"> </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $('form').on('submit', function (e) {
+            e.preventDefault();
+            let imagen = $("option:selected",this).val()
+            $('#destino').css({'background-image': 'url(' + imagen + ')',});
+            console.log(imagen);
+        });
+    </script>
+
+
+</body>
+
+</html>
